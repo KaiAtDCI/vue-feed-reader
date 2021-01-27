@@ -4,7 +4,6 @@ Simple online reader for RSS2.0 news feeds. Educational project.
 
 ## Installation
 1. Install node.js
-2. Install vue-cli: `npm install -g @vue/cli`
 3. Clone repo
 4. Change into project directory and install npm and vue locally: `npm i`
 5. Start node.js-server `$ npm run serve`  
