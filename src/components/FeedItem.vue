@@ -33,16 +33,25 @@ export default {
 <style scoped>
 
   #container {
-    /*width: 100%;*/
+    padding: 1em;
     border-style: solid;
     border-width: 1px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-    padding: 10px;
+    border-radius: 1em;
+    margin-bottom: 0.5em;
+    background-color: #5280ba;
+    font-size: 0.8em;
+    color: whitesmoke;
+    text-align: justify;
   }
 
   #title {
-    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+
+    color: whitesmoke;
+    font-weight: bold;
+
+
   }
 
   .description {

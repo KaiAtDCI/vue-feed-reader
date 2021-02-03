@@ -1,9 +1,6 @@
 <template>
   <div id="url-list">
-    <form id="container">
-      <input type="text" id="urlTextField" placeholder="Enter feed's URL and click 'Add'-Button" v-model="urlNew" @keydown.enter.prevent="addUrl(urlNew)"/>
-      <input type="button" value="Add" id="addUrlButton" @click="addUrl(urlNew)"/>
-    </form>
+    <AddUrl id="add-url" @add="addUrl"></AddUrl>
     <div id="urlId">
       <URLItem class="urlItem" v-for="(item, index) in urlList" :key="index" :url="item.url" :channel-title="item.channelTitle" :isSelected="item.isSelected" @delete="deleteUrl(item)" @select="toggleSelectStatus(item)"/>
     </div>
@@ -11,12 +8,14 @@
 </template>
 
 <script>
+import AddUrl from "@/components/AddUrl";
 import URLItem from "@/components/URLItem.vue";
 import textToSpeech from "./text-to-speech"
 
 export default {
   components: {
-    URLItem
+    URLItem,
+    AddUrl
   },
 
   data() {
@@ -77,40 +76,10 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 
-    #urlList {
-      /*background-color: beige;*/
-    }
-
-    #container {
-      /*width: 100%;*/
-      display: flex;
-      flex-wrap: nowrap;
-      border-width: 1px;
-      border-style: solid;
-      border-radius: 20px;
-      margin-bottom: 20px;
-      padding: 10px;
-      /*background-color: lightblue;*/
-    }
-
-    .urlItem {
-      margin-bottom: 5px;
-    }
-
-    #urlTextField {
-      width: 100%;
-      margin-right: 20px;
-      font-size: larger;
-    }
-
-    #addUrlButton {
-      background-color: white;
-      border-color: black;
-      border-radius: 20px;
-      border-width: 1px;
-      box-shadow: black 1px 1px 0px 0px;
-    }
+  .urlItem {
+    margin-top: 0.5em;
+  }
 
 </style>

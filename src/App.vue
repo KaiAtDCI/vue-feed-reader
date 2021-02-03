@@ -1,7 +1,7 @@
 <template>
   <div id="App">
-    <URLList id="urlList" @urlChanged="changeUrl($event)"/>
-    <FeedChannel :url="url"/>
+    <URLList id="url-list" @urlChanged="changeUrl($event)"/>
+    <FeedChannel id="feed-channel" :url="url"/>
   </div>
 </template>
 
@@ -11,9 +11,7 @@
 
 
   export default {
-
     name: 'App',
-
     components: {
       URLList,
       FeedChannel,
@@ -33,6 +31,7 @@
 
     methods: {
       changeUrl (url) {
+        console.log('App: changeUrl() to: ' + url);
         this.url = url;
       }
     }
@@ -42,14 +41,16 @@
 <style scoped>
 
   #App {
-    /*background-color: whitesmoke;*/
     margin: 0;
     padding: 0;
-    /*width: 500px;*/
     font-family: Verdana, sans-serif;
-    font-size: medium;
+    font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  #url-list {
+    margin-bottom: 0.5em;
   }
 
 </style>
