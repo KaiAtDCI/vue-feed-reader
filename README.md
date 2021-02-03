@@ -9,4 +9,3 @@ Simple online reader for RSS2.0 news feeds. Educational project.
 4. Open `localhost:8080` in your browser
 5. Install and enable CORS-Browser-Plugin
 
-:-)
