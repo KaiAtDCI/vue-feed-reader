@@ -1,4 +1,5 @@
 <template>
+
   <div id="container" @click="sayText">
     <div>
       <a id="title" href="link">{{title}}</a>
@@ -33,7 +34,7 @@ export default {
 <style scoped>
 
   #container {
-    padding: 1em;
+    padding: 0.5em 1em 0.5em 1em;
     border-style: solid;
     border-width: 1px;
     border-radius: 1em;
@@ -47,11 +48,8 @@ export default {
   #title {
     overflow: hidden;
     white-space: nowrap;
-
     color: whitesmoke;
     font-weight: bold;
-
-
   }
 
   .description {

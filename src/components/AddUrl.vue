@@ -76,22 +76,15 @@ export default {
 
 </script>
 
-<style scoped>
-
-  * {
-    margin: 0;
-    padding: 0;
-  }
+<style>
 
   .container {
     display: flex;
     align-items: center;
     height: 2em;
-    border-radius: 1em;
     background: #5280ba;
     color: whitesmoke;
-    font-family: "DejaVu Sans",sans-serif;
-    font-size: 1em;
+    border-radius: 1em;
   }
 
   #label {
@@ -99,12 +92,14 @@ export default {
   }
 
   #text-url {
+    width: 50px;
+    font-size: 0.8em;
     flex-grow: 1;
     margin: 0 1em 0 1em;
   }
 
   #button-add {
-    font-size: 1em;
+    flex-shrink: 0;
     width: 6em;
     height: 1.5em;
     margin-right: 0.5em;
@@ -112,6 +107,7 @@ export default {
     border-width: 1px;
     background-color: #568bc6;
     color: whitesmoke;
+    font-family: 'Saira Condensed', sans-serif;
   }
 
   .disabled {

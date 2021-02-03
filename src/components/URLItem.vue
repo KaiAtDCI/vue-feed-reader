@@ -35,12 +35,13 @@
     flex-grow: 1;
   }
 
-  .isSelected {
+  #url.isSelected {
     font-weight: bold;
   }
 
   #button-delete {
-    font-size: 1em;
+        flex-shrink: 0;
+
     width: 6em;
     height: 1.5em;
     margin-right: 0.5em;
@@ -49,4 +50,5 @@
     background-color: #568bc6;
     color: whitesmoke;
   }
+
 </style>

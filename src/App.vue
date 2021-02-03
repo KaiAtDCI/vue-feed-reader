@@ -40,10 +40,15 @@
 
 <style scoped>
 
-  #App {
+  @import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@300&display=swap');
+
+* {
     margin: 0;
     padding: 0;
-    font-family: Verdana, sans-serif;
+  }
+
+  #App {
+    font-family: 'Saira Condensed', sans-serif;
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

@@ -9,5 +9,5 @@ export default function textToSpeech(text) {
             utterence.pitch = 0;
         }
     })
-    synth.speak(utterence);
+    // synth.speak(utterence);
 }
